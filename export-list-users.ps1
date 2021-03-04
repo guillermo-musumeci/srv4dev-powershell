@@ -32,4 +32,4 @@ $OUList = Get-ADOrganizationalUnit -SearchBase $AccountCustomers -SearchScope On
 
 <## Get The List of Users ##>
 $output = ForEach ($OUName in $OUList) { (Get-Account-List -Account $OUName) }
-$output | Out-File"SRV4DEV-List-User.csv"
+$output | Out-File "SRV4DEV-List-User.csv"
